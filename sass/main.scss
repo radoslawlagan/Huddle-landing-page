@@ -1,0 +1,166 @@
+@import './colors';
+
+*,
+::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.6rem;
+	background-color: $violet;
+	background-image: url(/images/bg-mobile.svg);
+	background-repeat: no-repeat;
+	background-size: contain;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.wrapper {
+	margin: 2.8rem 2.8rem;
+	max-width: 600px;
+}
+
+.logo {
+	margin-bottom: 3.8em;
+	&__img {
+		width: 45%;
+		height: auto;
+	}
+}
+
+.mockup {
+	display: flex;
+	justify-content: center;
+	&__img {
+		width: 100%;
+		height: auto;
+	}
+}
+
+.cta {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 4em 0;
+	text-align: center;
+	&__header {
+		font-family: 'Poppins', sans-serif;
+		font-weight: 600;
+		color: $white;
+	}
+
+	&__text {
+		padding: 1em 0.5em;
+		color: $white;
+		line-height: 1.5;
+		letter-spacing: 1px;
+	}
+
+	&__btn {
+		margin: 1em 0;
+		padding: 0.8em;
+		width: 225px;
+		border: 0px solid transparent;
+		border-radius: 50px;
+		background-color: $white;
+		font-family: 'Poppins', sans-serif;
+		font-size: 1.5rem;
+		color: $violet;
+		cursor: pointer;
+
+		&:hover {
+			background-color: $soft-magenta;
+			color: $white;
+			box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+		}
+	}
+}
+
+.icons {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 2em;
+	&__icon {
+		margin: 0.5em;
+		padding: 0.5em;
+		color: $white;
+		border: 2px solid $white;
+		border-radius: 50%;
+		font-size: 1.8rem;
+		cursor: pointer;
+
+		&:hover {
+			border-color: $soft-magenta;
+			color: $soft-magenta;
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	body {
+		background-image: url(/images/bg-desktop.svg);
+		background-size: cover;
+	}
+
+	.wrapper {
+		max-width: 1200px;
+		display: grid;
+		grid-template-columns: 55% 45%;
+		grid-template-rows: 20% 70% 10%;
+		column-gap: 5em;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.logo {
+		grid-column: 1/3;
+
+		&__img {
+			width: 20%;
+		}
+	}
+
+	.mockup {
+		grid-column: 1/2;
+		grid-row: 2/3;
+	}
+
+	.cta {
+		grid-column: 2/3;
+		grid-row: 2/3;
+		text-align: left;
+		align-items: start;
+
+		&__header {
+			font-size: 4rem;
+			padding-right: 2.7em;
+		}
+
+		&__text {
+			font-size: 2rem;
+			padding: 1em 0;
+		}
+
+		&__btn {
+			font-size: 1.8rem;
+		}
+	}
+
+	.icons {
+		grid-column: 3/3;
+		grid-row: 3/3;
+		margin-bottom: 0;
+		&__icon {
+			font-size: 2.2rem;
+		}
+	}
+}
