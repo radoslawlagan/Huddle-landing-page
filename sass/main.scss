@@ -44,7 +44,7 @@ body {
 	display: flex;
 	justify-content: center;
 	&__img {
-		width: 90%;
+		width: 100%;
 		height: auto;
 	}
 }
@@ -129,7 +129,7 @@ body {
 	}
 }
 
-@media (min-width: 1125px) {
+@media (min-width: 1075px) {
 	body {
 		background-image: url(../images/bg-desktop.svg);
 		background-size: cover;
@@ -159,6 +159,11 @@ body {
 		grid-column: 1/2;
 		grid-row: 2/3;
 		justify-content: start;
+
+		&__img {
+			width: 90%;
+			min-width: 525px;
+		}
 	}
 
 	.cta {
