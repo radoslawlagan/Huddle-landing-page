@@ -29,5 +29,3 @@ Users should be able to:
 - Flexbox
 - Grid
 - Mobile-first workflow
-
-### What I learned
