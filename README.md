@@ -11,6 +11,10 @@ Users should be able to:
 - View the optimal layout for the page depending on their device's screen size
 - See hover states for all interactive elements on the page
 
+### Screenshot
+
+![](./screenshot.jpg)
+
 ### Links
 
 - Live Site URL: [HERE](https://radoslawlagan.github.io/Huddle-landing-page/)
